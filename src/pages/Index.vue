@@ -21,4 +21,9 @@ const theme = computed(() => (isDark.value ? 'dark' : 'light'))
 		<div>base: {{ t('about') }}</div>
 		<div>nesting: {{ t('nesting.sir') }} {{ t('nesting.lady') }}</div>
 	</div>
+	<n-button
+		class="cursor-pointer mt-6 ml-6"
+		@click="$router.push({ path: 'boli' })"
+		>English</n-button
+	>
 </template>
