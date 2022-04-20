@@ -279,12 +279,7 @@ pnpm lint:fix
 <br />
 <br />
 
-## 启发 🐃
 
-该模板受 **[vitesse](https://github.com/antfu/vitesse)** 启发，如果你有 SSG 的场景，那么推荐你始终使用 **[vitesse](https://github.com/antfu/vitesse)**。
-
-<br />
-<br />
 
 ## 组织 🦔
 
