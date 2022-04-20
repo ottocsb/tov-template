@@ -23,7 +23,7 @@ const theme = computed(() => (isDark.value ? 'dark' : 'light'))
 	</div>
 	<n-button
 		class="cursor-pointer mt-6 ml-6"
-		@click="$router.push({ path: 'boli' })"
+		@click="$router.push({ path: 'glass' })"
 		>English</n-button
 	>
 </template>
