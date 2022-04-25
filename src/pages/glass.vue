@@ -2,7 +2,7 @@
 	<div class="card">
 		<h1>TiKi Platinum</h1>
 		<h2>6228 8076 2232 8768</h2>
-		<h3>van conf banck</h3>
+		<h3>van conf bank</h3>
 		<h4>03 / 29</h4>
 	</div>
 	<div class="circle"></div>
@@ -16,7 +16,7 @@
 	color: rgba(255, 255, 255, 0.8);
 	position: absolute;
 	right: 50%;
-	bottom: 50%;
+	bottom: 30%;
 	z-index: 10;
 	font-family: sans-serif;
 	text-align: center;

@@ -1,8 +1,20 @@
 <script setup>
 import { weather, weatherEn } from '../api/test'
+import { useMessage } from 'naive-ui'
 
+const { isDark, toggleDark } = useDarks()
+const theme = computed(() => (isDark.value ? 'dark' : 'light'))
 const { t, locale } = useI18n()
 const language = computed(() => (locale.value === 'zh-CN' ? '中文' : 'English'))
+const name = ref(null)
+const message = useMessage()
+
+onMounted(() => {
+	name.value = localStorage.getItem('name')
+	if (name.value) {
+		message.success('欢迎回来' + name.value)
+	}
+})
 
 const weatherData = () => {
 	if (locale.value === 'en') {
@@ -22,8 +34,12 @@ const toggleLocale = () => {
 </script>
 
 <template>
-	<div @click="toggleLocale()">
-		<div>{{ t('language') }}: {{ language }}</div>
+	<div class="m-6">
+		<div>id：{{ name }}</div>
+		<div @click="toggleLocale()">{{ t('language') }}: {{ language }}</div>
+		<div class="cursor-pointer" @click="toggleDark()">
+			{{ t('theme') }}: {{ theme }}
+		</div>
 
 		<div>{{ t('weather') }}: &nbsp; {{ t('temp') }}：</div>
 	</div>
