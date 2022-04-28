@@ -24,6 +24,7 @@ const sendName = () => {
 		localStorage.setItem('name', _name)
 		name.value = _name
 		router.push('/chatBox')
+		router.go(0)
 	}
 }
 </script>

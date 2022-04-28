@@ -16,6 +16,10 @@ onMounted(() => {
 	}
 })
 
+watch(name, (val) => {
+	localStorage.setItem('name', val)
+})
+
 const weatherData = () => {
 	if (locale.value === 'en') {
 		const { data } = weatherEn()

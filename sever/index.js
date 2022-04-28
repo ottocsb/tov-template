@@ -11,7 +11,7 @@ const WebSocket = require('ws')
 		server.on('close', handleClose)
 		server.on('error', handleError)
 	}
-	function handleOpen() {
+	const handleOpen = () => {
 		console.log('server is open')
 	}
 	function handleConnection(ws) {
