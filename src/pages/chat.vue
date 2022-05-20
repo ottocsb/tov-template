@@ -9,7 +9,7 @@ const message = useMessage()
 onMounted(() => {
 	name.value = localStorage.getItem('name')
 	if (!name.value) {
-		name.value = '路过游客' + Math.floor(Math.random() * 100)
+		name.value = '路过滴游客' + Math.floor(Math.random() * 100)
 	} else {
 		router.push('/chatBox')
 	}
