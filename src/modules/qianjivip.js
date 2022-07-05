@@ -9,9 +9,11 @@ QuantumultX:
 hostname = qianji.xxoojoke.com
 **************************/
 
-var body = $response.body
-body.replace(/"vipstart" : -1/g, '"ipstart":0');
-body.replace(/"vipend" : -1/g, '"pend":0');
-body.replace(/"viptype" : -1/g, '"iptype":100');
-$done({ body });
+
+let obj = JSON.parse($response.body);
+obj.data.config.userinfo.vipstart = 1;
+obj.data.config.userinfo.vipend = 100;
+obj.data.config.userinfo.viptype = 100;
+
+$done({ body: JSON.stringify(obj) });
 
