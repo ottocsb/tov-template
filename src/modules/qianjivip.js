@@ -11,8 +11,8 @@ hostname = qianji.xxoojoke.com
 
 
 let obj = JSON.parse($response.body);
-obj.data.config.userinfo.vipstart = 1;
-obj.data.config.userinfo.vipend = 100;
+obj.data.config.userinfo.vipstart = 0;
+obj.data.config.userinfo.vipend = 0;
 obj.data.config.userinfo.viptype = 100;
 
 $done({ body: JSON.stringify(obj) });
