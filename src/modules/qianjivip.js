@@ -10,8 +10,8 @@ hostname = qianji.xxoojoke.com
 **************************/
 
 var body = $response.body
-	.replace(/"vipstart" : -1/g, "\"vipstart\":0")
-	.replace(/"vipend" : -1/g, "\"vipend\":0")
-	.replace(/"viptype" : -1/g, "\"viptype\":100");
+body.replace(/"vipstart" : -1/g, '"ipstart":0');
+body.replace(/"vipend" : -1/g, '"pend":0');
+body.replace(/"viptype" : -1/g, '"iptype":100');
 $done({ body });
 
