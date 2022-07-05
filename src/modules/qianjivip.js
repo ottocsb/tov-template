@@ -8,6 +8,8 @@ QuantumultX:
 [mitm]
 hostname = qianji.xxoojoke.com
 **************************/
+$.log("我是钱迹我已进入")
+$.log($response.body)
 let body = $response.body
 	.replace(/"vipstart" : -1/g,'"vipstart":0')
 	.replace(/"vipend" : -1/g,'"vipend":0')
